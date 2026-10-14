@@ -92,7 +92,7 @@ final class LeakTracker {
   /// Emits a leak report using the provided [emitter].
   ///
   /// Defaults to console output. This does not clear the registry.
-  static void emit({LeaksEmitter emitter = const .print()}) =>
+  static void emit({LeaksEmitter emitter = const LeaksEmitter.print()}) =>
       emitter.emit(snapshot);
 
   /// Whether leak tracking is currently enabled.
