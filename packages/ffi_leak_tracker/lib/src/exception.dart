@@ -18,7 +18,7 @@ final class LeakTrackerException implements Exception {
   /// The [leaks] list must not be empty, as this exception represents the
   /// presence of detected leaks. The optional [filter] describes the rule used
   /// to determine which allocations were considered leaks.
-  LeakTrackerException({required this.leaks, this.filter = const .ignoreNone()})
+  LeakTrackerException({required this.leaks, this.filter = const LeakFilter.ignoreNone()})
     : assert(
         leaks.isNotEmpty,
         'LeakTrackerException must have at least one leak.',
